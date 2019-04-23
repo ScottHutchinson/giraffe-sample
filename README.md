@@ -12,17 +12,15 @@ This sample web application demonstrates how to get started with Giraffe to crea
 
 4. dotnet new giraffe -lang F#
 
-5. cd src\giraffe-sample
+5. dotnet restore
 
-6. dotnet restore
+6. dotnet run
 
-7. dotnet run
-
-8. Open a browser and navigate to localhost:5000
+7. Open a browser and navigate to localhost:5000
 
 	You should see "Hello world, from Giraffe!"
 
-9. Navigate to http://localhost:5000/hello/Fred
+8. Navigate to http://localhost:5000/hello/Fred
 
 	You should see "Hello Fred, from Giraffe!"
 	
