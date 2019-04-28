@@ -28,7 +28,7 @@ This sample web application demonstrates how to get started with Giraffe to crea
 
 	You should see "Hello Fred, from Giraffe!"
 
-# Links
+# Resources
 
 https://github.com/giraffe-fsharp/Giraffe
 
