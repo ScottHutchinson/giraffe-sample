@@ -56,6 +56,7 @@ module Views =
                     _onclick "window.globalping();"] [str "Global Log"]
             button [_id "importedping"
                     _onclick "pingme()"] [str "Log from referenced script"]
+            textarea [] [ str "type anything you want here" ]
         ] |> layout
 
 // ---------------------------------
