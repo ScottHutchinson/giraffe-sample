@@ -12,20 +12,22 @@ This sample web application demonstrates how to get started with Giraffe to crea
 
 4. dotnet new giraffe -lang F#
 
-5. cd src\giraffe-sample
+5. .\build.bat
 
-6. dotnet restore
+	NOTE: If the folder name contains hyphens, then you will need to edit the build.bat to replace the underscores with hyphens.
 
-7. dotnet run
+6. dotnet run --project src/giraffe-sample/giraffe-sample.fsproj
 
-8. Open a browser and navigate to localhost:5000
+	or dotnet watch --project src/giraffe-sample/giraffe-sample.fsproj run
+
+7. Open a browser and navigate to http://localhost:5000/
 
 	You should see "Hello world, from Giraffe!"
 
-9. Navigate to http://localhost:5000/hello/Fred
+8. Navigate to http://localhost:5000/hello/Fred
 
 	You should see "Hello Fred, from Giraffe!"
-	
+
 # Links
 
 https://github.com/giraffe-fsharp/Giraffe
