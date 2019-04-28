@@ -32,7 +32,14 @@ module Views =
                 link [ _rel  "stylesheet"
                        _type "text/css"
                        _href "/main.css" ]
-            ]
+                script [_type "application/javascript"; _src "/sample.js"] []
+                script [_type "application/javascript"] [
+                    rawText """
+                    window.globalping = function () {
+                        console.log("ping from the window.globalping method");
+                    }
+                    """
+                ]            ]
             body [] content
         ]
 
@@ -43,6 +50,12 @@ module Views =
         [
             partial()
             p [] [ encodedText model.Text ]
+            button [_id "inlineping"
+                    _onclick "console.log(\"ping from inline handler\");" ] [ str "Inline Log" ]
+            button [_id "globalping"
+                    _onclick "window.globalping();"] [str "Global Log"]
+            button [_id "importedping"
+                    _onclick "pingme()"] [str "Log from referenced script"]
         ] |> layout
 
 // ---------------------------------
